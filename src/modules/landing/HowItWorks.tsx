@@ -2,7 +2,7 @@ import { Card } from "./components";
 
 export const HowItWorks = () => {
   return (
-    <section className="px-8 py-16 bg-[#131313]">
+    <section className="px-8 py-16 bg-[#131313]" id="how-it-works">
       <h3 className="text-3xl font-bold text-center mb-12 text-white">How EcoRally Works</h3>
       <div className="flex flex-col md:flex-row justify-center gap-8 max-w-5xl mx-auto">
         <Card

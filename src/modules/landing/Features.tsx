@@ -2,7 +2,7 @@ import { Card } from "./components";
 
 export const Features = () => {
   return (
-    <section className="px-8 py-16">
+    <section className="px-8 py-16" id="features">
       <h3 className="text-3xl font-bold text-center mb-12 text-white">
         What EcoRally Offers
       </h3>

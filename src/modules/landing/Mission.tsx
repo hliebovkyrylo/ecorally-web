@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export const Mission = () => {
   return (
-    <section className="py-16 px-8 w-full max-w-[1200px] mx-auto">
+    <section className="py-16 px-8 w-full max-w-[1200px] mx-auto" id="mission">
       <p className="text-4xl text-white font-bold text-center">
         Our Mission: A Cleaner Ukraine
       </p>

@@ -31,16 +31,16 @@ export const Header = () => {
         <nav className="hidden md:block">
           <ul className="flex gap-6">
             <li className="text-gray-400 hover:text-white transition-colors">
-              <a href="">Mission</a>
+              <a href="#mission">Mission</a>
             </li>
             <li className="text-gray-400 hover:text-white transition-colors">
-              <a href="">How it works</a>
+              <a href="#how-it-works">How it works</a>
             </li>
             <li className="text-gray-400 hover:text-white transition-colors">
-              <a href="">Features</a>
+              <a href="#features">Features</a>
             </li>
             <li className="text-gray-400 hover:text-white transition-colors">
-              <a href="">Join Us</a>
+              <a href="#call-to-action">Join Us</a>
             </li>
           </ul>
         </nav>
@@ -72,28 +72,28 @@ export const Header = () => {
       >
         <ul className="flex flex-col gap-6">
           <li className="text-gray-400 hover:text-white transition-colors">
-            <a href="" onClick={toggleMenu}>
+            <a href="#mission" onClick={toggleMenu}>
               Mission
             </a>
           </li>
           <li className="text-gray-400 hover:text-white transition-colors">
-            <a href="" onClick={toggleMenu}>
+            <a href="#how-it-works" onClick={toggleMenu}>
               How it works
             </a>
           </li>
           <li className="text-gray-400 hover:text-white transition-colors">
-            <a href="" onClick={toggleMenu}>
+            <a href="#features" onClick={toggleMenu}>
               Features
             </a>
           </li>
           <li className="text-gray-400 hover:text-white transition-colors">
-            <a href="" onClick={toggleMenu}>
+            <a href="#call-to-action" onClick={toggleMenu}>
               Join Us
             </a>
           </li>
         </ul>
       </nav>
-      <button className="hidden md:block px-4 py-2 bg-blue-400 text-white cursor-pointer rounded-lg">
+      <button className="hidden md:block px-4 py-2 bg-blue-400 hover:bg-blue-500 transition-colors text-white cursor-pointer rounded-lg">
         Get Started
       </button>
     </header>
