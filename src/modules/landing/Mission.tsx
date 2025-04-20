@@ -2,11 +2,11 @@ import Image from "next/image";
 
 export const Mission = () => {
   return (
-    <section className="py-16 px-8">
+    <section className="py-16 px-8 w-full max-w-[1200px] mx-auto">
       <p className="text-4xl text-white font-bold text-center">
         Our Mission: A Cleaner Ukraine
       </p>
-      <div className="flex justify-center gap-6 mt-12">
+      <div className="flex justify-center gap-6 mt-12 max-lg:flex-col max-lg:items-center">
         <div className="w-full max-w-2xl text-white flex flex-col gap-4">
           <p>
             Ukraine’s forests, rivers, and fields face growing threats from
@@ -34,7 +34,7 @@ export const Mission = () => {
           alt="Ukraine nature"
           width={500}
           height={100}
-          className="rounded-3xl"
+          className="rounded-3xl w-full"
         />
       </div>
     </section>
