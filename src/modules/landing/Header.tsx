@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 
 export const Header = () => {
@@ -93,9 +94,9 @@ export const Header = () => {
           </li>
         </ul>
       </nav>
-      <button className="hidden md:block px-4 py-2 bg-blue-400 hover:bg-blue-500 transition-colors text-white cursor-pointer rounded-lg">
+      <Link href={"/in-development"} className="hidden md:block px-4 py-2 bg-blue-400 hover:bg-blue-500 transition-colors text-white cursor-pointer rounded-lg">
         Get Started
-      </button>
+      </Link>
     </header>
   );
 };

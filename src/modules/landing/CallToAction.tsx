@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export const CallToAction = () => {
   return (
     <section className="px-8 py-16 text-center" id="call-to-action">
@@ -8,9 +10,9 @@ export const CallToAction = () => {
         Download EcoRally to organize or join cleanup events in your community.
         Be the change Ukraine needs—one cleanup at a time.
       </p>
-      <button className="btn-primary text-white px-6 py-3 rounded-lg text-lg bg-blue-400 hover:bg-blue-500 transition-colors cursor-pointer">
+      <Link href={"/in-development"} className="btn-primary text-white px-6 py-3 rounded-lg text-lg bg-blue-400 hover:bg-blue-500 transition-colors cursor-pointer">
         Get the App
-      </button>
+      </Link>
     </section>
   );
 };
