@@ -15,9 +15,12 @@ export const Sidebar = () => {
           const isActive = pathname === link.path;
           return (
             <Link
+              key={link.name}
               href={link.path}
               className={`w-full flex items-center gap-2 group rounded-lg p-2 ${
-                isActive ? "text-accent bg-primary-foreground" : "text-muted-foreground"
+                isActive
+                  ? "text-accent bg-primary-foreground"
+                  : "text-muted-foreground"
               } hover:bg-primary-foreground hover:text-accent transition-colors`}
             >
               {link.icon}
