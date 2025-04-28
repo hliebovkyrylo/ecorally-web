@@ -5,11 +5,10 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Bell, LogOut, Plus, Settings, User } from "lucide-react";
-import Link from "next/link";
 
 export const Header = () => {
   return (
-    <header className="flex justify-end w-full items-center py-3">
+    <header className="flex justify-end w-full items-center py-3 sticky top-0 right-0 backdrop-blur-md">
       <div className="flex items-center gap-4">
         <button className="cursor-pointer">
           <Bell className="text-muted-foreground hover:text-accent transition-colors" />
