@@ -8,7 +8,7 @@ export const MainLayout = ({ children }: { children: ReactNode }) => {
         <Sidebar />
         <div className="w-full">
           <Header />
-          <div>{children}</div>
+          <div className="p-6">{children}</div>
         </div>
       </div>
     </main>
