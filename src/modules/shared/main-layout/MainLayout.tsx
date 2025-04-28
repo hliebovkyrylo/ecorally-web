@@ -1,11 +1,16 @@
 import { ReactNode } from "react";
-import { Header } from "./components";
+import { Header, Sidebar } from "./components";
 
 export const MainLayout = ({ children }: { children: ReactNode }) => {
   return (
     <main className="px-[128px]">
-      <Header />
-      <div>{children}</div>
+      <div className="flex w-full">
+        <Sidebar />
+        <div className="w-full">
+          <Header />
+          <div>{children}</div>
+        </div>
+      </div>
     </main>
   );
 };

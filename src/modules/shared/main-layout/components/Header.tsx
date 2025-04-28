@@ -4,19 +4,16 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { LogOut, Plus, Settings, User } from "lucide-react";
+import { Bell, LogOut, Plus, Settings, User } from "lucide-react";
 import Link from "next/link";
 
 export const Header = () => {
   return (
-    <header className="flex justify-end items-center py-3">
+    <header className="flex justify-end w-full items-center py-3">
       <div className="flex items-center gap-4">
-        <Link
-          className="text-muted-foreground hover:text-white transition-colors"
-          href={"/"}
-        >
-          Створити подію
-        </Link>
+        <button className="cursor-pointer">
+          <Bell className="text-muted-foreground hover:text-accent transition-colors" />
+        </button>
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <div className="bg-blue-400 p-2 rounded-full cursor-pointer text-white">
@@ -25,19 +22,19 @@ export const Header = () => {
           </DropdownMenuTrigger>
           <DropdownMenuContent>
             <DropdownMenuItem>
-              <User className="text-primary-foreground" />
+              <User className="text-accent" />
               <span>Профіль</span>
             </DropdownMenuItem>
             <DropdownMenuItem>
-              <Plus className="text-primary-foreground" />
+              <Plus className="text-accent" />
               <span>Створити подію</span>
             </DropdownMenuItem>
             <DropdownMenuItem>
-              <Settings className="text-primary-foreground" />
+              <Settings className="text-accent" />
               <span>Налаштування</span>
             </DropdownMenuItem>
             <DropdownMenuItem>
-              <LogOut className="text-primary-foreground" />
+              <LogOut className="text-accent" />
               <span>Вийти</span>
             </DropdownMenuItem>
           </DropdownMenuContent>
