@@ -21,7 +21,7 @@ const Popup = dynamic(() => import("react-leaflet").then((mod) => mod.Popup), {
 });
 
 export const AllEventsMap = () => {
-  const [icon, setIcon] = useState<any>(null);
+  const [icon, setIcon] = useState<L.DivIcon | null>(null);
 
   useEffect(() => {
     import("leaflet").then((L) => {
