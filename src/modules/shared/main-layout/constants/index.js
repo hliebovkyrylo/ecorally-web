@@ -19,7 +19,7 @@ export const sidebarLinks = [
   {
     icon: <Plus />,
     name: "Створити подію",
-    path: "/create-event",
+    path: "/event/create",
   },
   {
     icon: <User />,
