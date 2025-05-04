@@ -1,9 +1,12 @@
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
+import { LanguageDropdown } from "./components";
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
+  const t = useTranslations("Landing.Header");
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -32,16 +35,16 @@ export const Header = () => {
         <nav className="hidden md:block">
           <ul className="flex gap-6">
             <li className="text-gray-400 hover:text-white transition-colors">
-              <a href="#mission">Mission</a>
+              <a href="#mission">{t("nav.mission")}</a>
             </li>
             <li className="text-gray-400 hover:text-white transition-colors">
-              <a href="#how-it-works">How it works</a>
+              <a href="#how-it-works">{t("nav.howItWorks")}</a>
             </li>
             <li className="text-gray-400 hover:text-white transition-colors">
-              <a href="#features">Features</a>
+              <a href="#features">{t("nav.features")}</a>
             </li>
             <li className="text-gray-400 hover:text-white transition-colors">
-              <a href="#call-to-action">Join Us</a>
+              <a href="#call-to-action">{t("nav.joinUs")}</a>
             </li>
           </ul>
         </nav>
@@ -74,29 +77,35 @@ export const Header = () => {
         <ul className="flex flex-col gap-6">
           <li className="text-gray-400 hover:text-white transition-colors">
             <a href="#mission" onClick={toggleMenu}>
-              Mission
+              {t("nav.mission")}
             </a>
           </li>
           <li className="text-gray-400 hover:text-white transition-colors">
             <a href="#how-it-works" onClick={toggleMenu}>
-              How it works
+              {t("nav.howItWorks")}
             </a>
           </li>
           <li className="text-gray-400 hover:text-white transition-colors">
             <a href="#features" onClick={toggleMenu}>
-              Features
+              {t("nav.features")}
             </a>
           </li>
           <li className="text-gray-400 hover:text-white transition-colors">
             <a href="#call-to-action" onClick={toggleMenu}>
-              Join Us
+              {t("nav.joinUs")}
             </a>
           </li>
         </ul>
       </nav>
-      <Link href={"/in-development"} className="hidden md:block px-4 py-2 bg-blue-400 hover:bg-blue-500 transition-colors text-white cursor-pointer rounded-lg">
-        Get Started
-      </Link>
+      <div className="flex items-center gap-7">
+        <LanguageDropdown />
+        <Link
+          href={"/near-events"}
+          className="hidden md:block px-4 py-2 bg-blue-400 hover:bg-blue-500 transition-colors text-white cursor-pointer rounded-lg"
+        >
+          {t("button.start")}
+        </Link>
+      </div>
     </header>
   );
 };
