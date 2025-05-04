@@ -14,7 +14,7 @@ export const SeoHead = ({
   image = "https://ecorally.vercel.app/og.png",
   url = "https://ecorally.vercel.app/",
 }: SeoHeadProps) => {
-  const t = useTranslations("Seo");
+  const t = useTranslations("Landing.Hero");
 
   const metaTitle = title ?? t("title");
   const metaDescription = description ?? t("description");

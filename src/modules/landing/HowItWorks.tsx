@@ -1,5 +1,5 @@
 import { useTranslations } from "next-intl";
-import { Card } from "./components";
+import { Card } from "./common";
 
 export const HowItWorks = () => {
   const t = useTranslations("Landing.HowItWorks");

@@ -1,6 +1,7 @@
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
+import { LanguageDropdown } from "./components";
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -96,12 +97,15 @@ export const Header = () => {
           </li>
         </ul>
       </nav>
-      <Link
-        href={"/near-events"}
-        className="hidden md:block px-4 py-2 bg-blue-400 hover:bg-blue-500 transition-colors text-white cursor-pointer rounded-lg"
-      >
-        {t("button.start")}
-      </Link>
+      <div className="flex items-center gap-7">
+        <LanguageDropdown />
+        <Link
+          href={"/near-events"}
+          className="hidden md:block px-4 py-2 bg-blue-400 hover:bg-blue-500 transition-colors text-white cursor-pointer rounded-lg"
+        >
+          {t("button.start")}
+        </Link>
+      </div>
     </header>
   );
 };
