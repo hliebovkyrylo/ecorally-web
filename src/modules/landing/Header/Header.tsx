@@ -49,25 +49,24 @@ export const Header = () => {
           </ul>
         </nav>
       </div>
-      <button
-        className="md:hidden z-20"
-        onClick={toggleMenu}
-        aria-label="Toggle menu"
-      >
-        <div
-          className={`w-6 h-0.5 bg-white mb-1.5 transition-transform ${
-            isMenuOpen && "invisible"
-          }`}
-        ></div>
-        <div
-          className={`w-6 h-0.5 bg-white mb-1.5 ${isMenuOpen && "invisible"}`}
-        ></div>
-        <div
-          className={`w-6 h-0.5 bg-white transition-transform ${
-            isMenuOpen && "invisible"
-          }`}
-        ></div>
-      </button>
+      <div className="flex md:hidden gap-7">
+        <LanguageDropdown />
+        <button onClick={toggleMenu} aria-label="Toggle menu">
+          <div
+            className={`w-6 h-0.5 bg-white mb-1.5 transition-transform ${
+              isMenuOpen && "invisible"
+            }`}
+          ></div>
+          <div
+            className={`w-6 h-0.5 bg-white mb-1.5 ${isMenuOpen && "invisible"}`}
+          ></div>
+          <div
+            className={`w-6 h-0.5 bg-white transition-transform ${
+              isMenuOpen && "invisible"
+            }`}
+          ></div>
+        </button>
+      </div>
       <nav
         ref={menuRef}
         className={`fixed top-0 right-0 h-full w-64 bg-[#131313b3] backdrop-blur-md transform transition-transform duration-300 ease-in-out ${
@@ -97,11 +96,11 @@ export const Header = () => {
           </li>
         </ul>
       </nav>
-      <div className="flex items-center gap-7">
+      <div className="hidden md:flex items-center gap-7">
         <LanguageDropdown />
         <Link
           href={"/near-events"}
-          className="hidden md:block px-4 py-2 bg-blue-400 hover:bg-blue-500 transition-colors text-white cursor-pointer rounded-lg"
+          className="px-4 py-2 bg-blue-400 hover:bg-blue-500 transition-colors text-white cursor-pointer rounded-lg"
         >
           {t("button.start")}
         </Link>
