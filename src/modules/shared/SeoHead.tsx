@@ -1,5 +1,4 @@
 import Head from "next/head";
-import { useTranslations } from "next-intl";
 
 type SeoHeadProps = {
   title: string;

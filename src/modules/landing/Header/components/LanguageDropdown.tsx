@@ -15,7 +15,6 @@ export const LanguageDropdown = () => {
     document.cookie = `NEXT_LOCALE=${lang}; path=/`;
     router.push(asPath, asPath, { locale: lang });
   };
-  
 
   return (
     <DropdownMenu>
