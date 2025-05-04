@@ -12,6 +12,7 @@ export const LanguageDropdown = () => {
   const { locale, asPath } = router;
 
   const changeLanguage = (lang: string) => {
+    document.cookie = `NEXT_LOCALE=${lang}; path=/`;
     router.push(asPath, asPath, { locale: lang });
   };
 
@@ -23,13 +24,13 @@ export const LanguageDropdown = () => {
         </button>
       </DropdownMenuTrigger>
       <DropdownMenuContent>
-        <DropdownMenuItem onClick={() => changeLanguage("uk-UK")}>
+        <DropdownMenuItem onClick={() => changeLanguage("uk")}>
           <div className="flex w-full items-center justify-between gap-2">
             <span>Українська</span>
             {locale === "uk-UK" ? <Check /> : null}
           </div>
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => changeLanguage("en-US")}>
+        <DropdownMenuItem onClick={() => changeLanguage("en")}>
           <div className="flex w-full items-center justify-between gap-2">
             <span>English</span>
             {locale === "en-US" ? <Check /> : null}
