@@ -3,7 +3,7 @@ import { ChartBar, Earth, Map, Plus, Search, User } from "lucide-react";
 export const sidebarLinks = [
   {
     icon: <Earth />,
-    name: "Події неподалеку",
+    name: "Події недалеко",
     path: "/near-events",
   },
   {
@@ -24,11 +24,11 @@ export const sidebarLinks = [
   {
     icon: <User />,
     name: "Мій профіль",
-    path: "/profile",
+    path: "/in-development",
   },
   {
     icon: <ChartBar />,
     name: "Статистика додатку",
-    path: "/statistics",
+    path: "/in-development",
   },
 ];

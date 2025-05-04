@@ -4,7 +4,10 @@ import Link from "next/link";
 
 export const CleanupEventCard = () => {
   return (
-    <Link href={"/"} className="rounded-xl overflow-hidden bg-primary-foreground hover:bg-primary-foreground/70 p-3 transition-colors">
+    <Link
+      href={"/event/1"}
+      className="rounded-xl overflow-hidden bg-primary-foreground hover:bg-primary-foreground/70 p-3 transition-colors"
+    >
       <Image
         className="w-full rounded-md mb-2"
         src={"/test.jpg"}
