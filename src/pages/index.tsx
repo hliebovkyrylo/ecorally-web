@@ -10,14 +10,15 @@ import {
 } from "@/modules/landing";
 import { SeoHead } from "@/modules/shared";
 import { GetStaticPropsContext } from "next";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 export default function Home() {
   const t = useTranslations("Landing.Hero");
+  const locale = useLocale();
 
   return (
     <>
-      <SeoHead title={t("title")} description={t("subtitle")} />
+      <SeoHead locale={locale} title={t("title")} description={t("subtitle")} />
       <main>
         <Header />
         <Hero />
