@@ -2,6 +2,7 @@ import Head from "next/head";
 
 type SeoHeadProps = {
   title: string;
+  locale: string;
   description: string;
   image?: string;
   url?: string;
@@ -9,8 +10,11 @@ type SeoHeadProps = {
 
 export const SeoHead = ({
   title,
+  locale,
   description,
-  image = "https://ecorally.vercel.app/og.png",
+  image = locale === "uk"
+    ? "https://ecorally.vercel.app/og_uk.png"
+    : "https://ecorally.vercel.app/og_en.png",
   url = "https://ecorally.vercel.app/",
 }: SeoHeadProps) => {
   return (
